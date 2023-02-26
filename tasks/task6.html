@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній)</h3>
+    <script>
+        let num = 1
+        table = ''
+
+        for (q = 1; q <= 3; q++){
+            table += '<table border="1">'
+            for (let a = 1; a <= 3; a++){
+                table += '<tr>'
+                for (let b = 1; b<=3; b++){
+                    table += `<td>${num}</td>`
+                    num++
+                }
+                table += '</tr>'
+            }
+            table += '</table>'
+        }
+        document.write(table)
+    </script>
+</body>
+</html>

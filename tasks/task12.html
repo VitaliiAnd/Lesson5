@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Ігровий автомат. Випадково вибираємо зображення у 3
+        позиціях. Вибір у кожній позиції вибирається як одне
+        з чотирьох зображень. Вивести ці зображення і
+        повідомити виграш користувача (три перших зображення
+        100 грн, три других – 200, три третіх – 500, три
+        четвертих зображення – 1000грн). Використати цикли і
+        switch (для вибору зображення за номером).</h3>
+    <script>
+        let banan = 0;
+        let apple = 0;
+        let abrikos = 0;
+        let nectarin = 0;
+        let fruit;
+        let win;
+
+        for ( let q = 0; q < 3; q++){
+            let randomNumber = 1 + Math.floor(Math.random() * 4 - 1 + 1);
+            switch (randomNumber){
+                case 1:
+                    key = 1
+                    banan++
+                    break;
+                case 2:
+                    key = 2
+                    apple++
+                    break;
+                case 3:
+                    key = 3
+                    abrikos++
+                    break;
+                case 4:
+                    key = 4
+                    nectarin++
+                    break;
+            }
+            document.write(`<img src="../img/img${key}.jpeg">`)
+        }
+        if (banan === 3){
+            win = `${123}грн`
+            document.write(`Приз ${win}`)
+        }
+        else if (apple === 3){
+            win = `${200}грн`
+            document.write(`Приз ${win}`)
+        }
+        else if (abrikos === 3){
+            win = `${300}грн`
+            document.write(`Приз ${win}`)
+        }
+        else if (nectarin === 3){
+            win = `${400}грн`
+            document.write(`Приз ${win}`)
+        }
+        else prize = 'Програш'
+
+        document.write(`Ваш виграш ${prize}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Користувач поступово вводить прибуток магазину за
+        кожен день протягом N тижнів. Знайти загальну
+        величину прибутку та вивести величину прибутку
+        протягом кожного окремого тижня.:</h3>
+
+    <script>
+        const storeMoney = parseInt(prompt('За скільки тижнів рахувати прибуток?'))
+        let allMoney = 0
+        for (let q = 1; q <= storeMoney; q++){
+            let weekMoney = 0
+            for (let a = 1; a <= 7; a++){
+                let moneyForDay = parseFloat(prompt(`Прибуток за ${a}й день ${q}тижня`))
+                weekMoney += moneyForDay
+            }
+            allMoney += weekMoney
+            document.write(`Прибуток за ${q}й тиждень ${weekMoney}<br>`)
+        }
+        document.write(`Загальний прибуток ${allMoney}`)
+    </script>
+</body>
+</html>

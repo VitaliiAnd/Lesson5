@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).</h3>
+    <script>
+        const minNum = 1, maxNum = 100
+        alert('Загадай число')
+
+        let randomNum
+        for (let q = 0; q < 3; q++){
+            randomNum = minNum + Math.floor(Math.random() * (maxNum - minNum +1))
+            let num = confirm(`Спроба ${q + 1} Загадане число ${randomNum}`)
+            if (num ===true){
+                alert('Ви вгадали')
+                break
+            }
+            else
+            alert('Непощастило')
+        }
+    </script>
+</body>
+</html>

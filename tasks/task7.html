@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Вивести на екран N абзаців (N вводиться користувачем)</h3>
+
+    <script>
+        const numParagraph = parseInt(prompt('Введіть кількість абзаців', ''))
+
+        for (let q = 1; q <= numParagraph; q++){
+            document.write(`<h1>Заголовок ${q}</h2>`)
+            for (let a = 1; a <= q; a++){
+                document.write(`<p>Розділ ${q}, параграф ${a}</p>`)
+            }
+            document.write('<hr>')
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Користувача поступово вводить показники температури протягом року. Знайти середню температуру.</h3>
+    <script>
+        let count = 0
+        let sumCount =0
+        let totalTemp =0
+        for (let q = 1; q <= 12; q++){
+            let temperaturValue = parseInt(prompt(`температура за ${q} місяць`))
+            if (isNaN(temperaturValue)){
+                totalTemp = sumCount / count
+                alert(`середня температура ${count} місяців ${totalTemp}`)
+                break
+            }
+            count++
+            sumCount += temperaturValue
+        }
+        totalTemp = sumCount / count
+        document.write(`середня температура ${count} місяців- ${totalTemp}`)
+    </script>
+</body>
+</html>

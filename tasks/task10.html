@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами. </h3>
+    <script>
+        const minNum = parseInt(prompt('ведіть мінімальне число'))
+        const maxNum = parseInt(prompt('введіть максимальне число'))
+
+        let sumOddNum = 0
+        for (let q = minNum; q <= maxNum; q++){
+            if (q % 2 > 0)
+            sumOddNum += q
+        }
+        document.write(`Сумма всіх непарних чисел ${sumOddNum}`)
+    </script>
+</body>
+</html>

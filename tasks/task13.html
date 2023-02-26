@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>Морський бій. Комп’ютер випадково розташовує
+        одиночний корабель на полі розміром N*M. Маючи К
+        снарядів користувач намагається потопити корабель.
+    </h3>
+
+    <script>
+        const fieldOne  = 1,
+            fieldTwo = parseInt(prompt('Розмір поля 1', '')),
+            zoneOne = 1,
+            zoneTwo = parseInt(prompt('розмір поля 2', '')),
+            boatOne = fieldOne + Math.floor(Math.random() * (fieldTwo - fieldOne + 1)),
+            boatTwo = fieldOne + Math.floor(Math.random() * (zoneTwo - zoneOne + 1))
+        console.log(boatOne)
+        console.log(boatTwo)
+        let q = parseInt(prompt('Загальна кількість пострілів', ''))
+        exit: for(let a = 0; a < q; a++){
+            let shootFieldOne = parseInt(prompt('постріл на полі 1', ''))
+            let shootFieldTwo = parseInt(prompt('постріл на полі 2', ''))
+            switch (true){
+                case (shootFieldOne === boatOne && shootFieldTwo === boatTwo):
+                    alert('потоплено')
+                    break exit;
+                default:
+                    alert('промазав')
+                    break;
+            }   
+        }
+        document.write(`кораблик був у ${boatOne}:${boatTwo}`)
+    </script>
+</body>
+</html>
